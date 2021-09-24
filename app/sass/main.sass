@@ -14,6 +14,9 @@
 	font-family: $font2
 	font-weight: 700
 
+	+r(992)
+		font-size: 26px
+
 	span
 		color: $title
 
@@ -345,6 +348,13 @@
 			max-width: 550px
 
 .steps
+	margin-bottom: 115px
+
+	+r(767)
+		margin-bottom: 130px
+
+	+r(480)
+		margin-bottom: 40px
 
 	&__container
 		max-width: 1050px
@@ -354,20 +364,51 @@
 		padding-top: 50px
 		gap: 45px
 
+		+r(1200)
+			gap: 30px
+			
+		+r(992)
+			flex-direction: column
+
+		+r(480)
+			gap: 15px
+
+
+
 	&__img
 		display: flex
 		align-items: center
 		justify-content: center
-		width: 617px
-		height: 617px
-		width: 100%
+		min-width: 617px
+		min-height: 617px
+		// width: 100%
 		background: url(../img/conf-bg.png)
 		background-size: 100%
+		position: relative
+
+		+r(992)
+			min-height: 300px
+			min-width: 300px
+			width: 50%
+
+		img
+
+			+r(992)
+				width: 70%
+
+		&::before
+			content: url(../img/star.svg)
+			position: absolute
+			top: 50%
+			left: 7%
 
 	&__text
 		display: flex
 		flex-direction: column
 		align-items: center
+
+		+r(992)
+			max-width: 500px
 
 	&__title
 		text-align: center
@@ -382,11 +423,18 @@
 		gap: 35px
 		margin-bottom: 60px
 
+		+r(992)
+			margin-bottom: 30px
+			gap: 20px
+
 		
 		li
 			display: flex
 			align-items: center
 			gap: 25px
+
+			+r(992)
+				gap: 15px
 
 			span
 				font-size: 22px
@@ -405,6 +453,83 @@
 				font-family: $font2
 				color: $dark
 				font-weight: 700
+
+.categories
+
+	&__container
+		padding-top: 60px
+		padding-bottom: 90px
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: $bg
+		border-radius: 15px
+		position: relative
+
+		+r(767)
+			padding-top: 30px
+			padding-bottom: 40px
+
+		&::before
+			content: url(../img/presents.svg)
+			position: absolute
+			bottom: 94%
+			left: 5%
+
+			+r(767)
+				bottom: 97%
+
+			+r(480)
+				display: none
+
+	&__title
+		margin-bottom: 15px
+		text-align: center
+
+	&__subtitle
+		margin-bottom: 50px
+		text-align: center
+
+		+r(767)
+			margin-bottom: 20px
+	
+	&__wrap
+		display: flex
+		gap: 20px
+
+		+r(767)
+			flex-direction: column
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 20px
+		+transition
+
+		&:hover
+			
+			span
+				border-bottom: 1px solid $accent
+				color: $accent
+
+		span
+			font-family: $font2
+			font-weight: 700
+			color: $dark
+			font-size: 22px
+			border-bottom: 1px solid transparent
+			+transition
+
+		&_img
+
+			img
+				
+				+r(1200)
+					max-width: 250px
+
+				+r(992)
+					max-width: 200px
 
 .footer
 	&__container
