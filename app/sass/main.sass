@@ -1,5 +1,22 @@
 @import base
 
+
+.h2
+	font-size: 42px
+	color: $dark
+	font-weight: 700
+	font-family: $font2
+	line-height: 62px
+
+.h3
+	color: $dark
+	font-size: 32px
+	font-family: $font2
+	font-weight: 700
+
+	span
+		color: $title
+
 // -----CONTAINER-----
 .container
 	width: 100%
@@ -25,24 +42,25 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	height: 45px
-	border-radius: 20px
+	height: 50px
+	min-width: 165px
+	border-radius: 15px
 	max-width: fit-content
-	border: 1px solid $dark
-	background-color: $dark
+	border: 1px solid $accent
+	background-color: $accent
 	padding: 0 15px
 	font-size: 16px
 	color: #fff
 	font-weight: 600
 
 	&:hover
-		border: 1px solid $accent
-		background: $accent
+		border: 1px solid $dark
+		background: $dark
 		color: #fff
 
 	&:active
 		border: 1px solid #fff
-		background: $accent
+		background: $dark
 		color: #fff
 
 // -----HAMBURGER-----
@@ -130,6 +148,7 @@
 	right: 0
 	left: 0
 	padding: 15px 0
+	z-index: 1000
 	
 
 	&__container
@@ -137,6 +156,7 @@
 		padding: 3px 35px
 		box-shadow: 0px 4px 18px rgba(89, 92, 164, 0.49)
 		border-radius: 15px
+		background: #fff
 
 	&__nav
 		+transition
@@ -240,13 +260,151 @@
 			&:hover
 				background-color: $accent
 
-.section
-	padding: 150px 0
+.hero
+	margin-top: 95px
 
 	&__container
+		padding: 0
+		position: relative
+
+		&::before
+			content: url(../img/confetti.png)
+			position: absolute
+			right: 90%
+			top: 0
+			z-index: 2
+
+	&__slider
+		overflow: hidden
+
+	&__slide
+		width: 100%
+		background: #B7B7F2
+		position: relative
+		height: 685px
 		display: flex
-		flex-wrap: wrap
-		gap: 15px
+		justify-content: flex-start
+		align-items: center
+		padding-left: 315px
+		gap: 30px
+		border-radius: 15px
+
+		+r(1700)
+			height: 600px
+
+		+r(1450)
+			height: 490px
+
+	&__text
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 20px
+		max-width: 590px
+		z-index: 1
+
+		&_subtitle
+			font-size: 24px
+			color: #fff
+			text-align: center
+
+		&_price
+			display: flex
+			gap: 35px
+		
+		&_title
+			text-transform: uppercase
+			text-align: center
+
+		&_num
+			color: #fff
+			font-size: 95px
+			font-family: $font2
+			font-weight: 700
+
+			span
+				font-weight: 300
+
+	&__btns
+		display: flex
+		gap: 20px
+
+	&__img
+		position: absolute
+		right: 0
+		// top: 35px
+		bottom: -15%
+
+		+r(1800)
+			max-width: 900px
+
+		+r(1700)
+			max-width: 700px
+
+		+r(1450)
+			max-width: 550px
+
+.steps
+
+	&__container
+		max-width: 1050px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 50px
+		gap: 45px
+
+	&__img
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 617px
+		height: 617px
+		width: 100%
+		background: url(../img/conf-bg.png)
+		background-size: 100%
+
+	&__text
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__title
+		text-align: center
+		margin-bottom: 10px
+
+	&__subtitle
+		margin-bottom: 15px
+
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 35px
+		margin-bottom: 60px
+
+		
+		li
+			display: flex
+			align-items: center
+			gap: 25px
+
+			span
+				font-size: 22px
+				font-family: $font2
+				color: #fff
+				background: $title
+				min-width: 35px
+				min-height: 35px
+				border-radius: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+
+			p
+				font-size: 22px
+				font-family: $font2
+				color: $dark
+				font-weight: 700
 
 .footer
 	&__container
@@ -589,3 +747,20 @@
 
 			img
 				max-width: 50%
+
+
+.swiper
+	width: 100%
+	height: 100%
+
+.swiper
+	&-slide
+		text-align: center
+		font-size: 18px
+
+	&-slide 
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover

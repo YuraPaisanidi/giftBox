@@ -3,29 +3,23 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	//----------------------SLIDER-hero----------------------
-		// var mySwiper = new Swiper('.hero__slider', {
-		// 	slidesPerView: 1,
-		// 	spaceBetween: 30,
-		// 	loop: true,
-		// 	effect: 'fade',
-		// 	autoplay: {
-		// 		delay: 5000,
-		// 	},
-		// 	pagination: {
-		// 		el: '.hero__pagination',
-		// 		clickable: 'true',
-		// 	},
-		// 	navigation: {
-		// 		nextEl: '.hero__next',
-		// 		prevEl: '.hero__prev',
-		// 	},
-		// 	breakpoints: {
-		// 		320: {
-		// 			slidesPerView: 2,
-		// 			spaceBetween: 20
-		// 		},
-		// 	}
-		// });
+		const mySwiper = new Swiper('.hero__slider', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			loop: true,
+			// effect: 'fade',
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: '.hero__pagination',
+				clickable: 'true',
+			},
+			navigation: {
+				nextEl: '.hero__next',
+				prevEl: '.hero__prev',
+			},
+		});
 
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
@@ -65,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		// scrollTo('.header__nav');
 	
-	//----------------------FIXED-HEADER-----------------------
+	// //----------------------FIXED-HEADER-----------------------
 		const headerFixed = (headerFixed, headerActive) => {
 			const header =  document.querySelector(headerFixed),
 						active = headerActive.replace(/\./, '');
