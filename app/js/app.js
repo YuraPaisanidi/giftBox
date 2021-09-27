@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	//----------------------SLIDER-hero----------------------
 		const mySwiper = new Swiper('.hero__slider', {
 			slidesPerView: 1,
-			spaceBetween: 30,
+			spaceBetween: 20,
 			loop: true,
 			// effect: 'fade',
 			autoplay: {
@@ -20,6 +20,38 @@ document.addEventListener("DOMContentLoaded", function() {
 				prevEl: '.hero__prev',
 			},
 		});
+
+	//----------------------Slider-gifts--------------
+	const swiper = new Swiper(".gifts__slider", {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		// pagination: {
+		// 	el: ".swiper-pagination",
+		// 	clickable: true,
+		// },
+		navigation: {
+			nextEl: '.gifts__next',
+			prevEl: '.gifts__prev',
+		},
+		breakpoints: {
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			767: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 20
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 30
+			},
+		}
+	});
 
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
