@@ -8,6 +8,9 @@
 	font-family: $font2
 	line-height: 62px
 
+	+r(767)
+		font-size: 30px
+
 .h3
 	color: $dark
 	font-size: 32px
@@ -304,6 +307,17 @@
 		+r(1450)
 			height: 490px
 
+		+r(1200)
+			padding-left: 100px
+
+		+r(992)
+			padding: 0 10px
+			justify-content: center
+
+		+r(767)
+			height: 400px
+
+
 	&__text
 		display: flex
 		flex-direction: column
@@ -352,6 +366,13 @@
 
 		+r(1450)
 			max-width: 550px
+
+		+r(1200)
+			max-width: 400px
+			bottom: -5%
+
+		+r(992)
+			display: none
 
 .steps
 	margin-bottom: 115px
