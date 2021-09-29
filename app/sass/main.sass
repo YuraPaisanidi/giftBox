@@ -1146,6 +1146,70 @@
 
 	&__password
 		@extend .profile__info
+
+//-----------------Sign Up------------------
+.sign-up
+	padding: 200px 15px 160px 15px
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+
+	+r(992)
+		padding-top: 150px
+		padding-bottom: 80px
+
+	+r(576)
+		padding-top: 100px
+		padding-bottom: 20px
+
+	&::after
+		content: url(../img/confetti-sign.png)
+		position: absolute
+		z-index: -1
+		top: 20%
+
+		+r(992)
+			display: none
+
+	&__wrap
+		max-width: 590px
+		width: 100%
+		padding: 45px 70px
+		background: $bg2
+		border-radius: 15px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		+r(767)
+			padding: 30px
+
+	&__title
+		font-size: 22px
+		color: $dark
+		font-family: $font2
+		font-weight: 700
+		margin-bottom: 45px
+
+	input
+		@extend .profile__input
+		margin-bottom: 25px
+
+		&:first-of-type
+			margin-bottom: 15px
+
+	&__btn
+		margin-bottom: 20px	
+
+	span
+		color: $accent
+
+		a
+			color: $accent
+			margin-left: 15px
+			text-decoration: underline
+
 // -----MODAL-----
 .modal
 	display: flex
