@@ -1077,6 +1077,10 @@
 				color: $dark
 				font-weight: 700
 
+				&.active
+					background: $accent
+					color: #fff
+
 				&:hover
 					background: $accent
 					color: #fff
@@ -1140,6 +1144,8 @@
 	&__btn
 		align-self: flex-end
 
+	&__password
+		@extend .profile__info
 // -----MODAL-----
 .modal
 	display: flex
