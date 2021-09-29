@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
 				el: '.hero__pagination',
 				clickable: 'true',
 			},
-			navigation: {
-				nextEl: '.hero__next',
-				prevEl: '.hero__prev',
-			},
+			// navigation: {
+			// 	nextEl: '.hero__next',
+			// 	prevEl: '.hero__prev',
+			// },
 		});
 
 	//----------------------Slider-gifts--------------
