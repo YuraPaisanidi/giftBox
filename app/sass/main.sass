@@ -1104,6 +1104,10 @@
 			font-family: $font2
 			color: $dark
 
+		&--order
+			background: #fff
+			padding: 0
+
 	&__info
 		display: flex
 		flex-direction: column
@@ -1209,6 +1213,55 @@
 			color: $accent
 			margin-left: 15px
 			text-decoration: underline
+
+//-----------------Orders--------------------
+.account-orders-table
+
+	+r(480)
+		font-size: 13px
+
+	thead
+		background: $bg2
+		height: 50px
+		border-radius: 15px
+		color: $dark
+
+.order
+
+	td
+		padding: 30px 0
+		color: $accent
+
+.woocommerce-orders-table
+
+	&__header-order-number
+		// padding-left: 50px
+		border-top-left-radius: 15px
+		border-bottom-left-radius: 15px
+		text-align: center
+
+	&__header-order-actions
+			border-top-right-radius: 15px
+			border-bottom-right-radius: 15px
+
+	&__cell-order-number
+		text-align: center
+		padding-top: 40px
+		
+		a
+			color: $dark
+
+	&__cell-order-total
+		font-weight: 700
+		color: $dark !important
+
+	&__cell-order-actions
+		
+		a
+			color: $accent
+			text-decoration: underline
+
+
 
 // -----MODAL-----
 .modal
