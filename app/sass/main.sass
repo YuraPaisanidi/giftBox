@@ -1798,6 +1798,116 @@
 			display: flex
 			justify-content: center
 
+//------------------Cart-----------------------
+.shopping-cart
+	@extend .favorites
+
+	&__container
+		max-width: 1230px
+		padding: 0 15px
+		margin: 0 auto
+
+	&__title
+		@extend .favorites__title
+
+	&__wrap
+
+.woocommerce
+
+	&__table
+		width: 100%
+
+		thead
+			display: none
+
+		tr
+			padding: 20px 0
+
+	&__product-thumbnail
+		width: 143px
+		height: 143px
+		border-radius: 15px
+		overflow: hidden
+
+		a
+			width: 100%
+			border-radius: 15px
+
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+	&__product-name
+		padding-left: 75px
+		background: $bg2
+		border-top-left-radius: 15px
+		border-bottom-left-radius: 15px
+		max-width: 500px
+
+		a
+			font-family: $font2
+			font-weight: 700
+			font-size: 22px
+			color: $dark
+
+	&__product-quantity
+		background: $bg2
+
+		.quantity
+			max-width: 150px
+			height: 50px
+			display: flex
+			background: #fff
+			border-radius: 15px
+			overflow: hidden
+
+			input
+				max-width: 50px
+				border: none
+				text-align: center
+
+			a
+				max-width: 50px
+				width: 100%
+				background: #fff
+				display: flex
+				align-items: center
+				justify-content: center
+				color: $dark
+
+	&__product-subtotal
+		background: $bg2
+		border-top-right-radius: 15px
+		border-bottom-right-radius: 15px
+		text-align: center
+		font-family: $font2
+		color: $dark
+
+	&__product-remove
+		padding-left: 35px
+		width: 60px
+
+		a
+			width: 60px
+			height: 60px
+			border: 1px solid $dark
+			border-radius: 100%
+			color: $dark
+			display: flex
+			align-items: center
+			justify-content: center
+
+			&:hover
+				border-color: $accent
+				color: $accent
+
+
+
+
+
+
 
 // -----MODAL-----
 .modal
