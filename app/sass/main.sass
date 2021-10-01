@@ -1558,6 +1558,144 @@
 		+r(767)
 			font-size: 14px
 
+//-----------------Contact-us-------------
+.contacts
+	@extend .favorites
+
+	&__container
+		@extend .favorites__container
+		align-items: flex-start
+
+		+r(767)
+			max-width: 450px
+
+	&__title
+		@extend .favorites__title
+		color: $accent
+
+	&__info
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 20px
+		width: 100%
+		border-bottom: 1px solid $accent
+		padding-bottom: 100px
+
+		+r(767)
+			flex-direction: column
+			padding-bottom: 50px
+
+		&_left
+			max-width: 590px
+
+			+r(992)
+				max-width: 450px
+
+		&_right
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			gap: 45px
+
+			+r(767)
+				align-items: center
+
+	&__subtitle
+		margin-bottom: 45px
+
+	&__link
+		color: $dark
+		text-align: center
+
+		a
+			color: $accent
+			text-decoration: underline
+
+	&__icon
+		width: 90px
+		height: 90px
+		border-radius: 100%
+		border: 1px solid $accent
+		display: flex
+		align-items: center
+		justify-content: center
+		+transition
+
+	&__btn
+		display: flex
+		align-items: center
+		gap: 20px
+		color: $accent
+		font-family: $font2
+		font-size: 22px
+		font-weight: 700
+
+		&:hover
+			
+			span
+				border-color: $title
+
+				svg
+					path
+						stroke: $title
+						+transition
+
+	&__wrap
+		padding-top: 60px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		padding-right: 50px
+		gap: 20px
+
+		+r(992)
+			flex-direction: column
+			padding-right: 0
+			margin: 0 auto
+			width: 100%
+
+		+r(767)
+			padding-top: 50px
+
+	&__item
+		display: flex
+		flex-direction: column
+		gap: 30px
+
+		+r(992)
+			width: 100%
+			align-items: center
+
+		p
+			font-family: $font2
+			font-weight: 700
+			font-size: 22px
+			color: $dark
+			+transition
+
+			+r(767)
+				text-align: center
+
+			+r(576)
+				font-size: 18px
+
+		&:hover
+
+			p
+				color: $title
+			
+			span
+				border-color: $title
+
+				svg
+					path
+						stroke: $title
+						+transition
+
+
+
 // -----MODAL-----
 .modal
 	display: flex
@@ -1990,3 +2128,35 @@
 
 			&__content
 				opacity: 1
+
+.write-us
+
+	&__wrap
+		background: $bg2
+		border-radius: 15px
+		max-width: 590px
+
+	&__title
+		font-family: $font2
+		font-weight: 700
+		color: $dark
+		font-size: 22px
+
+	&__item
+		
+		input, textarea
+			border-color: transparent
+			border-radius: 15px
+			color: $dark
+
+			&:focus,
+			&:active
+				border-color: $dark
+
+		textarea
+			height: 165px
+
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
