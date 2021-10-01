@@ -1694,6 +1694,109 @@
 						stroke: $title
 						+transition
 
+//----------------Corporate-gifts-----------
+.corporate
+	@extend .favorites
+
+	&__container
+		max-width: 925px
+		margin: 0 auto
+		padding: 0 15px
+
+	&__title
+		@extend .favorites__title
+
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__img
+		margin-bottom: -20px
+		position: relative
+
+		img
+
+			+r(992)
+				max-width: 767px
+				width: 100%
+
+		.confetti
+			position: absolute
+			top: 64%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+			+r(1200)
+				max-width: 992px
+
+			+r(992)
+				max-width: 767px
+
+			+r(767)
+				max-width: 576px
+			
+			+r(576)
+				max-width: 480px
+
+			+r(480)
+				max-width: 320px
+
+	&__wrap
+		background: $bg2
+		border-radius: 15px
+		padding: 80px 70px 50px 60px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		+r(992)
+			padding: 40px
+
+		+r(480)
+			padding: 30px 20px
+
+
+		&_quest
+			display: flex
+			flex-direction: column
+			gap: 30px
+
+		p
+			margin-bottom: 30px
+			align-self: flex-start
+
+			&.bold
+				font-family: $font2
+				font-size: 22px
+				color: $accent
+				margin-bottom: 30px
+				font-weight: 700
+				text-align: center
+				align-self: center
+
+	&__form
+		padding-top: 30px
+		max-width: 490px
+		width: 100%
+
+		&_item
+			@extend .write-us__item
+
+			label
+				display: flex
+				align-items: center
+				
+
+		&_label
+			color: $dark
+
+			span
+				color: $accent
+
+		&_btn
+			display: flex
+			justify-content: center
 
 
 // -----MODAL-----
@@ -1825,7 +1928,7 @@
 	&__label
 		font-size: 16px
 		font-weight: 500
-		margin-bottom: 5px
+		margin-bottom: 10px
 
 	&__input
 		width: 100%
@@ -1868,7 +1971,7 @@
 				align-self: start
 				flex: 0 0 24px
 				height: 24px
-				background-color: $dark
+				background-color: #fff
 				border-radius: 50%
 				margin-right: 10px
 
@@ -1880,9 +1983,12 @@
 				width: 16px
 				height: 16px
 				border-radius: 50%
-				background-color: #fff
+				background-color: $accent
 				transform: scale(0)
 				+transition
+
+			span
+				width: 100%
 
 		&_input
 			display: none
