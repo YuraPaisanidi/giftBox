@@ -1998,6 +1998,226 @@
 				border-color: $accent
 				color: $accent
 
+//----------------------Product-------------------
+.product
+	padding-top: 150px
+	padding-bottom: 25px
+
+	+r(576)
+		padding-top: 120px
+
+	&__container
+		max-width: 1230px
+		padding: 0 15px
+		margin: 0 auto
+
+	&__item
+		display: flex
+		gap: 75px
+		margin-bottom: 80px
+
+		+r(1200)
+			gap: 20px
+
+		+r(992)
+			flex-direction: column
+
+		+r(480)
+			margin-bottom: 60px
+
+	&__img
+		display: flex
+		gap: 20px
+
+		+r(992)
+			width: 100%
+			gap: 10px
+
+		+r(576)
+			height: 300px
+
+		&_main
+			width: 485px
+			height: 485px
+			border-radius: 15px
+			overflow: hidden
+
+			+r(992)
+				width: 90%
+
+			+r(576)
+				height: 100%
+				width: 80%
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+		&_list
+
+			+r(576)
+				overflow: scroll
+				width: 100px
+
+			+r(480)
+				width: 80px
+		
+		&_thumbs
+			display: flex
+			flex-direction: column
+			list-style-type: none
+			gap: 20px
+			padding: 0
+
+			+r(576)
+				gap: 10px
+
+			li
+				width: 80px
+				height: 80px
+				border-radius: 15px
+				overflow: hidden
+
+				+r(576)
+					width: 100%
+
+				img
+					object-fit: cover
+					width: 100%
+					height: 100%
+
+	&__info
+
+	&__desc
+		margin-bottom: 25px
+
+	&__title
+		font-weight: 700
+		font-family: $font2
+		font-size: 22px
+		color: $dark
+		margin-bottom: 15px
+
+	&__compos
+		color: $dark
+		margin-bottom: 30px
+
+		span
+			color: $accent
+			font-weight: 700
+			margin-right: 5px
+
+	&__pack
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-bottom: 45px
+
+		+r(480)
+			margin-bottom: 20px
+
+		&_title
+			margin-bottom: 25px
+
+		&_wrap
+			display: flex
+			gap: 20px
+
+			+r(576)
+				gap: 10px
+
+		&_item
+
+			input
+				display: none
+
+			.label
+				width: 82px
+				height: 82px
+				border-radius: 100%
+				overflow: hidden
+				margin-bottom: 0
+				border: 2px solid transparent
+				+transition
+
+				+r(576)
+					width: 60px
+					height: 60px
+
+				img
+					object-fit: cover
+					width: 100%
+					height: 100%
+
+				&:hover
+					cursor: pointer
+
+			input[type="radio"]
+				display: none
+
+			input[type="radio"]:checked + label
+				border: 2px solid $accent
+
+			input[type="radio"] + label
+
+	&__price
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		+r(480)
+			flex-direction: column
+			gap: 10px
+
+		&_quant
+			max-width: 150px
+			width: 100%
+			height: 50px
+			display: flex
+			background: $bg2
+			border-radius: 15px
+			overflow: hidden
+
+			input
+				max-width: 50px
+				border: none
+				text-align: center
+				background: $bg2
+
+			a
+				max-width: 50px
+				width: 100%
+				background: $bg2
+				display: flex
+				align-items: center
+				justify-content: center
+				color: $dark
+
+		&_item
+			display: flex
+			gap: 5px
+			font-family: $font2
+			font-size: 24px
+			color: $dark
+			font-weight: 300
+
+		&_btn
+			min-width: 150px
+
+	&__related
+
+		&_title
+			@extend .favorites__title
+
+		&_wrap
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr
+			grid-gap: 20px
+
+			+r(576)
+				grid-template-columns: 1fr
+				grid-gap: 10px
 
 // -----MODAL-----
 .modal
