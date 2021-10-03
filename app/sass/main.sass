@@ -420,25 +420,29 @@
 
 	&__img
 		position: absolute
-		right: 0
+		right: -5%
+		bottom: 0
 		// top: 35px
-		bottom: -15%
+		// bottom: -15%
 
 		+r(1800)
-			max-width: 900px
-
-		+r(1700)
 			max-width: 700px
+			width: 100%
+			right: 0
 
 		+r(1450)
-			max-width: 550px
+			max-width: 500px
 
 		+r(1200)
 			max-width: 400px
-			bottom: -5%
 
 		+r(992)
 			display: none
+
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
 
 .steps
 	margin-bottom: 115px
@@ -1816,12 +1820,15 @@
 
 	&__table
 		width: 100%
+		border-collapse: separate
+		border-spacing: 0 20px
 
 		thead
 			display: none
 
 		tr
-			padding: 20px 0
+			// padding: 20px 0
+
 
 	&__product-thumbnail
 		width: 143px
@@ -1832,6 +1839,7 @@
 		a
 			width: 100%
 			border-radius: 15px
+			display: block
 
 
 			img
@@ -1902,11 +1910,6 @@
 			&:hover
 				border-color: $accent
 				color: $accent
-
-
-
-
-
 
 
 // -----MODAL-----
@@ -2250,19 +2253,56 @@
 			img
 				max-width: 50%
 
-.swiper
-	width: 100%
-	height: 100%
-	&-slide
-		text-align: center
-		font-size: 18px
+.hero
 
-	&-slide 
-		img
-			display: block
+	&__slider
+		width: 100%
+		height: 100%
+		position: relative
+
+		&-slide
+			text-align: center
+			font-size: 18px
+
+		&-slide 
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+		&_pagination
+			z-index: 100
+			// position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top: 100px
+			height: 30px
 			width: 100%
-			height: 100%
-			object-fit: cover
+
+			+r(1200)
+				margin-top: 50px
+
+			+r(767)
+				margin-top: 30px
+
+
+			span
+				width: 12px
+				height: 12px
+				background: $accent
+				border-radius: 50%
+				display: block
+				border: 1px solid transparent
+				margin: 0 15px
+				+transition
+
+			.swiper-pagination-bullet-active
+				background: #fff
+				border: 1px solid $accent
+				width: 23px
+				height: 23px
 
 .accordion
 	padding: 10px 0

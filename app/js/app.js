@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			// 	delay: 5000,
 			// },
 			pagination: {
-				el: '.hero__pagination',
+				el: '.hero__slider_pagination',
 				clickable: 'true',
 			},
 			// navigation: {
