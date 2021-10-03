@@ -8,17 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			spaceBetween: 20,
 			loop: true,
 			// effect: 'fade',
-			// autoplay: {
-			// 	delay: 5000,
-			// },
+			autoplay: {
+				delay: 5000,
+			},
 			pagination: {
 				el: '.hero__slider_pagination',
 				clickable: 'true',
 			},
-			// navigation: {
-			// 	nextEl: '.hero__next',
-			// 	prevEl: '.hero__prev',
-			// },
+
 		});
 
 	//----------------------Slider-gifts--------------
