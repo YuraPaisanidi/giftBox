@@ -356,5 +356,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	accordions('.accordion');
 
 
+	//-------------------------------parallax---------------------------------------
+  $(window).scroll(function() {
+    var parallax = $(this).scrollTop();
+    $('.parallax').css({
+      'transform' : 'translate(0%, ' + parallax/15 + '%)'
+    });
+  });
+
+
 });
 	
