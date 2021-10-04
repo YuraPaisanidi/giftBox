@@ -22,10 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const swiper = new Swiper(".gifts__slider", {
 		slidesPerView: 1,
 		spaceBetween: 20,
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	clickable: true,
-		// },
+		// loop: true,
 		navigation: {
 			nextEl: '.gifts__next',
 			prevEl: '.gifts__prev',
